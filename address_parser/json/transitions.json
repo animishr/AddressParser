@@ -1,0 +1,11 @@
+{
+    "STOP": ["post_dir", "str_type", "occ_num"],
+    "junk": ["junk", "START"],
+    "house_num": ["junk", "START"],
+    "pre_dir": ["house_num", "junk"],
+    "str_nm": ["pre_dir", "house_num", "str_nm"],
+    "str_type": ["str_nm"],
+    "post_dir": ["str_type"],
+    "occ_id": ["post_dir", "str_type"],
+    "occ_num": ["occ_id", "post_dir", "str_type", "occ_num"]
+ }
