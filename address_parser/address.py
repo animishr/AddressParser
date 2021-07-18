@@ -1,8 +1,8 @@
 from collections import defaultdict
 
-from utils.config import DISPATCH_TABLE, TRANSITIONS
-from utils.format_strings import tokenize
-from utils.standardize import standardize_direction, standardize_street_type
+from .utils.config import DISPATCH_TABLE, TRANSITIONS
+from .utils.format_strings import tokenize
+from .utils.standardize import standardize_direction, standardize_street_type
 
 
 class Address:
@@ -37,7 +37,7 @@ class Address:
             self.__labels[current_tag].insert(0, token)
 
     @property
-    def house_num(self):
+    def house_num(self) -> str:
         """
         Gets House Number Component of the address.
 
@@ -47,7 +47,7 @@ class Address:
         return ' '.join(self.__labels.get('house_num', ''))
 
     @property
-    def pre_dir(self):
+    def pre_dir(self) -> str:
         """
         Gets Pre-Direction Component of the address.
 
@@ -57,7 +57,7 @@ class Address:
         return ' '.join(self.__labels.get('pre_dir', ''))
 
     @property
-    def str_nm(self):
+    def str_nm(self) -> str:
         """
         Gets Street Name Component of the address.
 
@@ -67,7 +67,7 @@ class Address:
         return ' '.join(self.__labels.get('str_nm', ''))
 
     @property
-    def str_type(self):
+    def str_type(self) -> str:
         """
         Gets Street Type Component of the address.
 
@@ -77,7 +77,7 @@ class Address:
         return ' '.join(self.__labels.get('str_type', ''))
 
     @property
-    def post_dir(self):
+    def post_dir(self) -> str:
         """
         Gets Post-Direction Component of the address.
 
@@ -87,7 +87,7 @@ class Address:
         return ' '.join(self.__labels.get('post_dir', ''))
 
     @property
-    def occ_id(self):
+    def occ_id(self) -> str:
         """
         Gets Occupancy Identifier Component of the address.
 
@@ -97,7 +97,7 @@ class Address:
         return ' '.join(self.__labels.get('occ_id', ''))
 
     @property
-    def occ_num(self):
+    def occ_num(self) -> str:
         """
         Gets Occupancy Number Component of the address.
 
@@ -106,7 +106,7 @@ class Address:
         """
         return ' '.join(self.__labels.get('occ_num', ''))
 
-    def __standardize_address(self):
+    def __standardize_address(self) -> str:
         """
         Standardizes the input Address
 
@@ -123,7 +123,7 @@ class Address:
         return ' '.join(filter(None, stdrd_tkns))
 
     @property
-    def standardized_address(self):
+    def standardized_address(self) -> str:
         """
         Gets the Standardized Address.
 
@@ -133,7 +133,7 @@ class Address:
         return self.__standardize_address()
 
     @property
-    def components(self):
+    def components(self) -> dict:
         """
         Gets Components of the input address.
 

@@ -1,7 +1,7 @@
 from .config import DIRECTIONS, STREET_TYPES
 
 
-def standardize_street_type(str_type):
+def standardize_street_type(str_type: str) -> str:
     """
     Standardizes Street Types
 
@@ -13,7 +13,7 @@ def standardize_street_type(str_type):
     return STREET_TYPES.get(str_type, '')
 
 
-def standardize_direction(direction):
+def standardize_direction(direction: str) -> str:
     """
     Standardizes Street Directions
 

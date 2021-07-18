@@ -1,6 +1,7 @@
+from typing import Iterable
 
 
-def remove_special_characters(s):
+def remove_special_characters(s: str) -> str:
     """
     Removes special characters from input string
 
@@ -12,7 +13,7 @@ def remove_special_characters(s):
     return s.upper().replace('.', '')
 
 
-def tokenize(s):
+def tokenize(s: str) -> Iterable:
     """
     Tokenizes input string
 
