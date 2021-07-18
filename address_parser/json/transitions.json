@@ -8,4 +8,4 @@
     "post_dir": ["str_type"],
     "occ_id": ["post_dir", "str_type"],
     "occ_num": ["occ_id", "post_dir", "str_type", "occ_num"]
- }
+}
