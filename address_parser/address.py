@@ -3,6 +3,7 @@ from collections import defaultdict
 from .utils.config import DISPATCH_TABLE, TRANSITIONS
 from .utils.format_strings import tokenize
 from .utils.standardize import standardize_direction, standardize_street_type
+from .utils.standardize import standardize_occupancy_identifier
 
 
 class Address:
@@ -118,7 +119,7 @@ class Address:
                       self.str_nm,
                       standardize_street_type(self.str_type),
                       standardize_direction(self.post_dir),
-                      self.occ_id,
+                      standardize_occupancy_identifier(self.occ_id),
                       self.occ_num]
         return ' '.join(filter(None, stdrd_tkns))
 
