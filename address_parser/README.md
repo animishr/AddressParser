@@ -16,5 +16,9 @@ addr.components
 # returns {'str_type': 'DRIVE', 'str_nm': 'KETCH HARBOUR', 'pre_dir': 'WEST', 'house_num': '763'}
 ```
 
+## Transitions
+
+![Transitions](addr_prsr_fsm_diagram.png)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
