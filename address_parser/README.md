@@ -1,6 +1,6 @@
 # AddressParser
 
-AddressParser is a Python library to parse Street Addresses into components and standardize them.
+AddressParser is a Python library to parse Street Addresses into address components using [Finite State Machines (FSM)] (https://en.wikipedia.org/wiki/Finite-state_machine "Finite-state machine - Wikipedia").
 
 ## Usage
 
@@ -18,7 +18,7 @@ addr.components
 
 ## Transitions
 
-![Transitions](addr_prsr_fsm_diagram.png)
+![Transitions](diagram.png)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
